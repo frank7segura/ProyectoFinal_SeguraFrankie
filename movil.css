@@ -1,0 +1,331 @@
+@media screen and (max-width: 430px){
+    :root {
+        --rojo: #FF5639; /* Definimos la variable */
+        --gris: #D8D7D7;
+        --negro: #252525;
+        --grisTexto: #5f5f5f;
+        --seccion: #f3f3f3;
+    }
+
+    .ancho{
+        margin: auto;
+        max-width: 430px;
+    }
+
+    .info {
+        position: absolute;
+        width: 50%;
+        top: 70px; /* Ajusta según la posición del ícono */
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        border-radius: 8px;
+        z-index: 1000;
+        opacity: 0; /* Invisible */
+        visibility: hidden; /* Oculta interacciones */
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+      }
+      
+      .info.active {
+        opacity: 1; /* Visible */
+        visibility: visible; /* Habilita interacciones */
+      }
+
+    
+    .info-tablet{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        border: none;
+    }
+
+    .cabecera a{
+        padding: 5px;
+        display: inline-block;
+    }
+
+    header{
+        border-bottom: none;
+    }
+    .nav-movil{
+        position: sticky;
+        top: 0; /* Define el punto de "pegado" */
+        background-color: white; /* Opcional: asegúrate de que el header sea visible */
+        z-index: 100;
+    }
+
+    .cabecera{
+        height: 70px;
+        padding: 5px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cabecera i{
+        color: var(--negro);
+        font-size: 24px;
+    }
+    
+    .cabecera figure{
+        display: flex;
+        width: 35%;
+        height: 45%;
+        gap: 10px;
+    }
+    
+    .cabecera figure figcaption{
+        display: block;
+    }
+    .cabecera figure img{
+        width: 100%;
+        height: 100%;
+    }
+
+  .slider {
+    width: 100%;
+    height: 75vh; 
+    overflow: hidden; 
+    position: relative;
+  }
+
+  .direccion_container {
+    /* margin-bottom: 50px; */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    }
+
+    .forma {
+      position: absolute; /* Posiciona la figura dentro de la sección */
+      top: 0;
+      right: 0;
+      width: 100%; /* Toma el ancho completo del contenedor */
+      height: 100%; /* Toma el alto completo del contenedor */
+      background-color: #f8714885; /* Color de fondo con opacidad para ilustración */
+      /* clip-path: polygon(0 0, 60% 0, 40% 100%, 0% 100%); */
+      clip-path: none;
+      z-index: 10; /* Asegura que esté detrás del contenido de la sección */
+  }
+
+.extra-content p{
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.cont_servicios{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+.servicio{
+  width: 90%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.servicio figure{
+  width: 100%;
+  height: 250px;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.servicio figure img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* transition: transform 0.4s ease-in-out; */
+  transform: scale(1.25);
+  filter: grayscale(100%) brightness(70%);
+}
+
+.servicio figure img:hover {
+  display: none;
+}
+
+.parallax {
+  height: 400px;
+}
+.puntos{
+  text-align: center;
+  padding: 20px 20px;
+  width: 90%;
+}
+
+.puntos h1{
+  font-size: 32px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.puntos p{
+    font-size: 14px;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(46, 46, 46, 0.589);
+    width: 100%;
+    height: 100%;
+    padding-left: 60px;
+  }
+/* CSS PARA EL LIGHTBOX */
+.gallery {
+  display: flex;
+  gap: 10px;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+.gallery a {
+  display: block;
+  width: 95%;
+  border-radius: 10px;
+  object-fit: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery img {
+  height: 100%;
+  border-radius: 5px;
+  /* transition: transform 0.4s ease-in-out; */
+  transform: scale(1.25);
+  filter: grayscale(60%) brightness(90%);
+}
+
+.icono {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 32px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.mapa{
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mapa h1{
+  text-align: center;
+  width: 60%;
+  font-size: 24px;
+  color: var(--negro);
+  border-bottom: 2px var(--rojo) solid;
+}
+
+.contacto{
+  padding: 20px;
+  width: 45%;
+  font-size: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formulario {
+  width: 45%;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.acordeon_float{
+    position: relative;
+    height: 400px;
+  }
+
+.acordeon_float h1{
+    font-size: 22px;
+}
+
+.contenedor_acordeon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+  }
+  .modulos_acordeon{
+    width: 100%;
+  }
+
+  .carrousel-mapa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 20px;
+    height: 800px;
+    align-items: center;
+  }
+
+  .carrusel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    width: 90%;
+    height: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .mapa{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mapa h1{
+    text-align: center;
+    width: 60%;
+    font-size: 24px;
+    color: var(--negro);
+    border-bottom: 2px var(--rojo) solid;
+  }
+
+  .form-contacto{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contacto{
+    padding: 20px;
+    width: 90%;
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+  }
+
+  .formulario {
+    width: 90%;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+  }
+}
